@@ -161,7 +161,7 @@ ul li a:hover {
 }
 
 .profile-image {
-  display: grid;
+  
   place-items: center;
   display: flex;
   gap: 30px;
@@ -324,10 +324,13 @@ ul li a:hover {
 
 .portfolio-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   margin-top: 150px;
-  margin-left: 150px; 
-  justify-items: center;
+  min-width: 600px;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 }
 
 .portfolio-title {
@@ -335,7 +338,7 @@ ul li a:hover {
   font-weight: 400;
   line-height: 3rem;
   color: var(--text-dark);
-  margin-bottom: 1rem;
+  
 }
 
 .portfolio-title span {
@@ -352,7 +355,8 @@ ul li a:hover {
 
 .portfolio__container {
   min-height: 70vh;
-  max-width: var(--max-width);
+  min-width: 600px;
+  width: auto;
   margin: auto;
   display: flex;
   grid-template-columns: repeat(2, 1fr);
@@ -364,16 +368,15 @@ ul li a:hover {
   flex-direction: row;
   position: relative;
   justify-content: center;
-  margin-left: 40px;
-  gap: 40px;
+  margin: auto;
+  gap: 50px;
 }
 .portfolio-img {
-  width: 570px;
+  width: 100%;
   height: 340px;
-  overflow: hidden;
-  margin: 50px auto;
-  
-}.portfolio-img img {
+
+}
+.portfolio-img iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -424,7 +427,8 @@ ul li a:hover {
 }
 .portfolio1__container {
   min-height: 70vh;
-  max-width: var(--max-width);
+  min-width: 600px;
+  width: auto;
   margin: auto;
   display: flex;
   grid-template-columns: repeat(2, 1fr);
@@ -436,14 +440,15 @@ ul li a:hover {
   flex-direction: row;
   position: relative;
   justify-content: center;
-  margin-left: 40px;
-  gap: 40px;
+  margin: auto;
+  gap: 50px;
 }
 .portfolio1-img {
   order: 2;
+  width: 100%;
 }
-.portfolio1-img img {
-  width: 520px;
+.portfolio1-img iframe {
+  width: 100%;
   height: 320px;
   order: 2;
 }
@@ -488,7 +493,8 @@ ul li a:hover {
 .contact {
   text-align: center;
   padding: 2rem;
-  max-width: 100%; 
+  min-width: 600px;
+  width: auto;
   margin: auto; 
 }
 
@@ -554,13 +560,15 @@ footer {
   color: #ecf0f1; 
   padding: 2rem 1rem;
   text-align: center;
+  min-width: 600px;
+  width: auto;
 }
 
 @media (width < 750px) {
   nav .checkbox {
     display: block;
   }
-
+  
   ul {
     position: absolute;
     width: 100%;
@@ -623,10 +631,12 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 50vh;
+    display: grid;
+    
   }
   .portfolio__container {
     min-height: 100vh;
+    
   }
  
 
@@ -646,6 +656,7 @@ footer {
   }
   .portfolio1__container {
     min-height: 100vh;
+    
   }
   
   .portfolio1-img {
